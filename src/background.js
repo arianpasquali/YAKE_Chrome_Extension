@@ -28,7 +28,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   						}).catch(function(ex) {
     						console.log('parsing failed', ex)
   						})
-
 						chrome.tabs.sendMessage(tabs[0].id, {
 							"message": "returnOptions",
 							"remove": request.remove,
